@@ -1,0 +1,114 @@
+Prerequisites
+
+Before starting, ensure you have the following installed on your machine:
+
+Node.js (v14 or later)
+
+npm or Yarn
+
+MongoDB (if running a local database)
+
+Git (optional, for cloning the repository)
+
+Installation Steps
+
+Clone the Repository
+
+git clone <repository-url>
+cd <repository-folder>
+
+Install Backend Dependencies
+
+Navigate to the backend folder and install dependencies:
+
+cd backend
+npm install
+
+Alternatively, if you prefer Yarn:
+
+yarn install
+
+Install Frontend Dependencies
+
+Navigate to the frontend folder and install dependencies:
+
+cd ../frontend
+npm install
+
+Or with Yarn:
+
+yarn install
+
+Set Up Environment Variables
+
+Both the backend and frontend may require environment variables. Create .env files in the respective directories:
+
+Backend (/backend/.env):
+
+PORT=5000
+MONGO_URI=<your-mongodb-connection-string>
+JWT_SECRET=<your-jwt-secret>
+
+Frontend (/frontend/.env):
+
+REACT_APP_API_URL=http://localhost:5000
+
+Replace placeholders (<...>) with your actual values.
+
+Run MongoDB
+
+Start your MongoDB server locally or ensure your cloud MongoDB instance is accessible.
+
+For local MongoDB:
+
+mongod
+
+Start the Backend Server
+
+In the backend directory:
+
+npm start
+
+Or with Nodemon (if installed):
+
+npm run dev
+
+Start the Frontend Server
+
+In the frontend directory:
+
+npm start
+
+Access the Application
+
+Open your browser and navigate to http://localhost:3000 to view the application.
+
+Common Commands
+
+Backend Commands
+
+Start the server: npm start
+
+Run in development mode: npm run dev
+
+Run tests: npm test
+
+Frontend Commands
+
+Start the development server: npm start
+
+Build for production: npm run build
+
+Run tests: npm test
+
+Troubleshooting
+
+Dependency Errors: Ensure you are using compatible Node.js and npm versions.
+
+MongoDB Connection Issues: Verify your MongoDB URI in the .env file.
+
+Port Conflicts: Ensure no other application is running on the same ports (default: 5000 for backend, 3000 for frontend).
+
+Contributing
+
+Feel free to contribute to this project. Fork the repository, make your changes, and submit a pull request.
